@@ -1,4 +1,4 @@
-const API = "http://localhost:3000";
+const API = "https://stock7-production-ffb1.up.railway.app/";
 // const API = "https://stock5-production.up.railway.app/";
 
 let coun = 0;
