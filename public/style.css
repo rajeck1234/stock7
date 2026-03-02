@@ -1,0 +1,148 @@
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #0f172a;
+    color: white;
+}
+
+/* ---------- HEADER ---------- */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    background-color: #1e293b;
+    font-size: 18px;
+    font-weight: bold;
+}
+.updown-section {
+    display: flex;
+    gap: 10px;
+    padding: 10px 16px;
+}
+
+.up-btn {
+    background-color: #22c55e;
+    color: white;
+}
+
+.down-btn {
+    background-color: red;
+    color: white;
+}
+
+.both-btn {
+    background-color: orange;
+    color: white;
+}
+.trade-summary {
+    font-size: 13px;
+    font-weight: normal;
+    color: #22c55e;
+}
+
+/* ---------- SECTION TITLE ---------- */
+.section-title {
+    padding: 10px 16px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    padding: 6px 12px;
+}
+
+/* ---------- STOCK CARD ---------- */
+.stock {
+    background-color: #1e293b;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 13px;
+}
+
+/* ---------- ALERT STYLE ---------- */
+.stock.alert-stock {
+    border-left: 4px solid red;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Buy */
+.buy {
+    background-color: #22c55e;
+    color: white;
+}
+
+/* Sell Alert */
+.sell-alert {
+    background-color: red !important;
+    color: white !important;
+}
+
+/* Add Stock Button */
+.add-btn {
+    width: 100%;
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.add-btn:hover {
+    background-color: #2563eb;
+}
+
+/* ---------- DUAL SECTION (Add + Portfolio) ---------- */
+.dual-section {
+    display: flex;
+    gap: 12px;
+    padding: 10px 12px;
+}
+
+.card-box {
+    flex: 1;
+    background-color: #1e293b;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* ---------- STOP ALARM ---------- */
+.stop-btn {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: orange;
+    padding: 10px 16px;
+    border-radius: 10px;
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .dual-section {
+        flex-direction: column;
+    }
+}

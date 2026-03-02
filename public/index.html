@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>📈 Live Trading</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="top-header">
+    <div class="header-title">📈 Live Trading</div>
+    <div id="tradeSummary" class="trade-summary">
+        Orders: 0 | Profit: ₹0
+    </div>
+</header>
+<div class="updown-section">
+    <button class="up-btn" onclick="toggleStartMovement('up')">🔼 UP</button>
+    <button class="down-btn" onclick="toggleStartMovement('down')">🔽 DOWN</button>
+    <!-- <button class="both-btn" onclick="toggleStartMovement('both')">🔼🔽 BOTH</button> -->
+</div>
+
+<!-- <div class="section-title" id="startMovementTitle" style="display:none;">
+📊 Start Price Movement
+</div> -->
+<!-- <div class="container" id="startMovementContainer"></div> -->
+<div class="section-title">
+🔼 Start Price UP
+</div>
+<div class="container" id="startMovementContainerUp"></div>
+
+<div class="section-title">
+🔽 Start Price DOWN
+</div>
+<div class="container" id="startMovementContainerDown"></div>
+
+<div class="card-box">
+    <div class="card-title">
+        Removed Start Movement
+    </div>
+    <div id="removedStartMovementBox"></div>
+</div>
+<!-- ================= MOMENTUM SECTIONS ================= -->
+
+<!-- 1️⃣ MAX % RAISE LAST CYCLE -->
+<!-- 1️⃣ MATCHING STOCKS (COMMON IN 5,10,15 SEC) -->
+<div class="section-title">
+🎯 Strong Signal Stocks Moment in Last 1 Minute
+</div>
+<div class="container" id="momentum3price"></div>
+
+<div class="section-title">
+🟢 Top 5 Stable Growth (Full Candle Trend)
+</div>
+<div class="container" id="stablegrowth"></div>
+
+
+<!-- 2️⃣ TOP 5 – LAST 5 SECONDS -->
+<div class="section-title">
+⚡ Top 5 Momentum (Last 5 Seconds)
+</div>
+<div class="container" id="momentum30"></div>
+
+
+<!-- 3️⃣ TOP 5 – LAST 10 SECONDS -->
+<div class="section-title">
+🚀 Top 5 Momentum (Last 10 Seconds)
+</div>
+<div class="container" id="momentum3"></div>
+
+
+<!-- 4️⃣ TOP 5 – LAST 15 SECONDS -->
+<div class="section-title">
+🔥 Top 5 Momentum (Last 15 Seconds)
+</div>
+<div class="container" id="momentum30price"></div>
+
+<div class="section-title">
+🔻 Top 5 Losers (Last 1 Minute)
+</div>
+<div class="container" id="momentum1loss"></div>
+
+<!-- <div class="section-title">🔥 Top 5 Increase in last second</div>
+<div class="container" id="momentum30price"></div>
+
+<div class="section-title">🔥 heighest rate percent in last 1 sec</div>
+<div class="container" id="momentum30"></div>
+
+<div class="section-title">🔥 Top 5 Price Raise (5 Sec) first and last</div>
+<div class="container" id="momentum3price"></div>
+
+<div class="section-title">🔥 Top 5 Percentage Raise (5 Sec) each cycle profit more then zero</div>
+<div class="container" id="momentum3"></div> -->
+
+<!-- ================= ACTION + PORTFOLIO ROW ================= -->
+<div class="dual-section">
+
+    <!-- Add Stock Card -->
+    <div class="card-box">
+        <div class="card-title">➕ Add Stock</div>
+        <button class="add-btn" onclick="addStock()">Add Stock</button>
+    </div>
+
+    <!-- Portfolio Card -->
+    <div class="card-box">
+        <div class="card-title">💼 Your Portfolio</div>
+        <div id="portfolio"></div>
+    </div>
+
+</div>
+
+<!-- ================= LIVE STOCKS ================= -->
+<div class="section-title">📊 Live Stocks</div>
+<div class="container" id="stocks"></div>
+
+<button id="stopAlarm" class="stop-btn" onclick="stopAlarm()">Stop Alarm</button>
+
+<script src="script.js"></script>
+<div class="dual-section">
+
+    <div class="card-box">
+        <div class="card-title">
+            Removed from Strong Signal
+        </div>
+        <div id="removedStrongBox"></div>
+    </div>
+
+    <div class="card-box">
+        <div class="card-title">
+            Removed from Stable Growth
+        </div>
+        <div id="removedStableBox"></div>
+    </div>
+    <div class="card-box">
+        <div class="card-title">
+            Removed Companies (Momentum Sections)
+        </div>
+        <div id="removedMomentumBox"></div>
+    </div>
+</div>
+</body>
+</html>
